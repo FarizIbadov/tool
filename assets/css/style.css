@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#fix {
+  position: fixed;
+  top: 0;
+}
+
+#header {
+  width: 100vw;
+  background: #fb0;
+  max-height: 63px;
+}
+
+#burger_div #burger {
+  display: none;
+  cursor: pointer;
+}
+
+#burger_div #burger .line {
+  width: 25px;
+  height: 5px;
+  margin: 3px;
+  background: #272727;
+}
+
+#nav {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'nav1 nav2 nav2';
+}
+
+#nav #nav-head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav1;
+}
+
+#nav #nav-head #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#nav #nav-head #logo img {
+  width: 146px;
+  height: 50px;
+  margin: 6px 0;
+}
+
+#nav #nav-head #logo h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: 13px 0;
+  text-align: center;
+  border: 2px solid #272727;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+#nav #nav-list {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: nav2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#nav #nav-list #nav-items {
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav #nav-list #nav-items .nav-links {
+  margin: 0 10px 0 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#nav #nav-list #nav-items .nav-links a {
+  text-decoration: none;
+  color: #272727;
+  text-transform: uppercase;
+  padding: 5px 7px;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+#nav #nav-list #nav-items .nav-links a:hover {
+  background: #272727;
+  color: #fb0;
+}
+
+@media screen and (max-width: 768px) {
+  #nav {
+        grid-template-areas: 'nav1 nav3' 'nav2 nav2';
+    -ms-grid-columns: 4fr 2fr;
+        grid-template-columns: 4fr 2fr;
+    grid-gap: 40%;
+  }
+  #nav #nav-head {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: nav1;
+  }
+  #nav #nav-head #logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #nav #nav-head #logo img {
+    margin: 3px 0;
+  }
+  #nav .active {
+    top: 60px !important;
+  }
+  #nav #nav-list {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: nav2;
+    position: absolute;
+    padding-bottom: 2px !important;
+    z-index: -10 !important;
+    top: -121px;
+    width: 100vw;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+    background: #272727;
+    opacity: 0.9;
+  }
+  #nav #nav-list #nav-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #nav #nav-list #nav-items .nav-links {
+    padding: 5px 0;
+  }
+  #nav #nav-list #nav-items .nav-links a {
+    color: #fb0;
+  }
+  #nav #burger_div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: nav3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #nav #burger_div #burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #nav {
+    -ms-grid-columns: 4fr 2fr;
+        grid-template-columns: 4fr 2fr;
+    grid-gap: 15% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
